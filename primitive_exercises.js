@@ -24,3 +24,31 @@ console.log(typeof x)
 
 x = null
 console.log(typeof x)
+
+// EJERCICIO 3
+
+	// THIS CODE SHOWS DIFERENTS TYPES OF PRIMITIVE TYPES
+
+	/*  RESERVED WORDS:
+		break
+		char
+		var
+		else
+		return 
+		if
+		void
+		this
+		true
+		false
+		for
+		function
+		catch
+		delete
+	*/
+	
+	x = 4444
+	console.log(typeof x)
+	x = null
+	console.log(typeof x)
+	x = true
+	console.log(typeof x)
