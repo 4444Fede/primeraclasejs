@@ -52,3 +52,5 @@ console.log(typeof x)
 	console.log(typeof x)
 	x = true
 	console.log(typeof x)
+
+console.log("FIN DIA 2")

@@ -37,3 +37,5 @@ console.log(2 > 4);
 console.log(44 < 4); 
 console.log(4 >= 44); 
 console.log(4444 <= 44); 
+
+console.log("FIN DIA 3")
