@@ -27,8 +27,6 @@ console.log(typeof x)
 
 // EJERCICIO 3
 
-	// THIS CODE SHOWS DIFERENTS TYPES OF PRIMITIVE TYPES
-
 	/*  RESERVED WORDS:
 		break
 		char
@@ -45,8 +43,10 @@ console.log(typeof x)
 		catch
 		delete
 	*/
+
+	// THIS CODE SHOWS IN CONSOLE DIFERENTS TYPES OF PRIMITIVE TYPES
 	
-	x = 4444
+	x = 444444442131231232144123132131231231231231424213123213124n 
 	console.log(typeof x)
 	x = null
 	console.log(typeof x)
