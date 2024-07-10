@@ -30,8 +30,8 @@ let number2 = 40
 
 // EJERCICIO 6
 
-let number
-let phrase
+let number = 4444
+let phrase = 'Sublime: '
 	
 	let concatenate_chain = phrase + number // Esto devuelve un string
 
@@ -65,7 +65,18 @@ let secondNumber = 73
 let firstPhrase = 'enano anabolico'
 let secondPhrase = 'Lionel Messi el GOAT'
 
+let combinedString1 = firstNumber + ' ' + firstPhrase + ' ' + secondPhrase + ' ' + secondNumber;
+let combinedString2 = `${firstNumber} ${firstPhrase} ${secondPhrase} ${secondNumber}`;
 
+// EJERCICIO 11
+
+let comparisonNumber1 = -4444
+let comparisonNumber2 = 23
+
+let firstComparison = comparisonNumber1 < comparisonNumber2;
+let secondComparison = comparisonNumber1 === comparisonNumber2;
+let thirdComparison = comparisonNumber2 <= comparisonNumber1;
+let fourthComparison = comparisonNumber2 !== comparisonNumber1;
 
 
 
