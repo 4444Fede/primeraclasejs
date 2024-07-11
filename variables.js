@@ -91,7 +91,7 @@ Declarar una constante e intentar reasignarle otro valor luego de su declaració
 */
 
 const taxes = 20
-//taxes = 10  // OUTPUT: TypeError: Assignment to constant variable.
+taxes = 10  // OUTPUT: TypeError: Assignment to constant variable.
 
 /* 
 EJERCICIO 10
@@ -128,12 +128,17 @@ Declarar cinco variables de tipo string cuyo valor contenga operaciones aritmét
 */
 
 const exercise12result = 4
+let exercise12number1 = 2
+let exercise12number2 = 1000
+let exercise12number3 = 996
+let exercise12number4 = 37
+let exercise12number5 = 33
 
-let multiplicationstring = '4 * 1 = ' + `${exercise12result}`
+let multiplicationstring = '4 * 1 = ' + `${exercise12result}` 
 let divisionstring = '44 / 11 = ' + exercise12result
-let additionstring = '2 + 2 = ' + `${exercise12result}`
-let subtractionstring = '1000 - 996 = ' + exercise12result
-let remainderstring = '37 % 33 = ' + `${exercise12result}`
+let additionstring = `2 + 2 = ${(exercise12number1 + exercise12number1)}`
+let subtractionstring = `1000 - 996 = ${(exercise12number2 - exercise12number3)}`
+let remainderstring = `37 % 33 = ${(exercise12number4 % exercise12number5)}`
 
 /* 
 EJERCICIO 13
@@ -146,7 +151,7 @@ let tipAmount
 
 bill = 8888
 personalizedTip = 5
-tipAmount = (bill * (personalizedTip / 100))
+tipAmount = `Deberia dejar: ${(bill * (personalizedTip / 100))} de propina`
 
 /*
 EJERCICIO 14
@@ -159,7 +164,7 @@ let finalAmount
 
 price = 5228.235294117647059
 discount = 15
-finalAmount = price - (price * (discount / 100))
+finalAmount =  `El precio final es: ${(price - (price * (discount / 100)))}`
 
 /*
 EJERCICIO 15
@@ -172,7 +177,7 @@ let actualAge
 
 actualYear = 2024
 bornYear = 2006
-actualAge = actualYear - bornYear
+actualAge = `Tiene ${actualYear - bornYear} años`
 
 /*
 EJERCICIO 16
