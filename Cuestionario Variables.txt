@@ -1,0 +1,64 @@
+﻿Cuestionario Variables
+
+
+1- ¿Qué es una variable en JavaScript?
+2- ¿Qué diferencia hay entre var, let y const?
+3- ¿Cuál es el ámbito de una variable declarada con var?
+4- ¿Cuál es el ámbito de una variable declarada con let?
+5- ¿Cuál es el ámbito de una variable declarada con const?
+6- ¿Qué sucede si intentas redeclarar una variable con var en el mismo ámbito?
+7- ¿Qué sucede si intentas redeclarar una variable con let en el mismo ámbito?
+8- ¿Qué sucede si intentas cambiar el valor de una constante declarada con const?
+9- ¿Es posible declarar una variable sin inicializarla? Si es así, ¿qué valor tiene por defecto?
+10- ¿Qué tipo de error se genera al intentar usar una variable no declarada?
+11- ¿Qué diferencia hay entre declarar una variable e inicializarla?
+12- ¿Qué es el hoisting en JavaScript?
+13- ¿Cómo afecta el hoisting a las variables declaradas con var?
+14- ¿Qué sucede si intentas acceder a una variable antes de declararla con let o const?
+15- ¿Qué es una variable global?
+16- ¿Es posible cambiar el tipo de datos de una variable en JavaScript? Da un ejemplo.
+17- ¿Cómo se puede verificar el tipo de una variable en JavaScript?
+
+
+1- Una variable en JavaScript es un espacio en memoria que puede contener un tipo de dato, como un número, una cadena, un objeto, etc.
+2- La diferencia entre var, let y const es la siguiente:
+* var: Tiene ámbito de función, puede ser redeclarada y su valor puede cambiar.
+* let: Tiene ámbito de bloque, no puede ser redeclarada en el mismo ámbito, y su valor puede cambiar.
+* const: Tiene ámbito de bloque, no puede ser redeclarada ni reasignada.
+3- El ámbito de una variable declarada con var es la función en la que se declara, o el ámbito global si se declara fuera de cualquier función.
+4- El ámbito de una variable declarada con let es el bloque en el que se declara. Esto quiere decir que al declarar la misma variable let en 2 if diferentes, actuarían como variables diferentes y al salir del if ya no podríamos acceder a ellas.
+5- El ámbito de una variable declarada con const es el bloque en el que se declara.
+6- JavaScript te permite hacer esto por cómo funcionan las variables var.
+7- Esto devuelve un error, ya que no es posible redeclarar una variable let en su mismo ámbito.
+8- Esto no es posible ya que la variable const está pensada para valores que no cambian, si intentas reasignar el valor de una variable const devolverá error.
+9- Sí, excepto si esta misma es de tipo const, en el resto de casos el valor quedará como undefined.
+10- Te devolverá que no está definida la variable, es decir, que no existe.
+11- Declarar una variable es darle a entender al código que la variable ya existe, mientras que inicializarla es asignarle un valor.
+12- El hoisting de JavaScript es cuando el intérprete de JavaScript ve una función del orden:
+
+
+function myfunction(){
+log.console(nombre)
+let nombre = ‘javi’
+}
+
+
+Y la lee como:
+
+
+function myfunction(){
+let nombre
+log.console(nombre)
+nombre = ‘javi’
+}
+
+
+Es decir, el intérprete separa la declaración de una variable de su inicialización y sube la declaración al principio del scope.
+13- Las variables var serán declaradas al principio de su scope y tendrán como valor undefined.
+14- Si intentas acceder a una variable antes de declararla con let o const, obtendrás un error, ya que intentaste acceder a una variable que no fue definida.
+15- Son las variables definidas por fuera de cualquier bloque o scope, estas pueden ser accedidas desde cualquier lado del código.
+16- Sí es posible ya que JavaScript es débilmente tipado. Por ejemplo:
+Let number = 4444
+number = ‘4444’
+// Con esto la variable number pasa de ser un número a ser una cadena de texto.
+17- Se puede utilizar la función typeof que devuelve el tipo de dato de la variable que se le haya pasado.
