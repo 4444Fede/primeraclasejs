@@ -200,24 +200,3 @@ triangleArea = 0.5 * triangleBase * triangleHeight
 circleArea = pi * (circleRadius ** 2)
 
 console.log("FIN DIA 4")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
