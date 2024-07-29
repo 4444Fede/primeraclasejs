@@ -38,7 +38,7 @@ Crea un bloque de código que compare dos nombres, y si ambos son iguales imprim
 
 let firstName = "Agustin"
 let secondName = "Tomas"
-if (firstName == secondName) {
+if (firstName === secondName) {
 	console.log(firstName)
 }
 
@@ -66,7 +66,7 @@ Crea un bloque de código que imprima en consola un número en caso de que NO se
 */
 
 let randomNumberTwo = 44
-if (randomNumberTwo > 0) {
+if (randomNumberTwo >= 0) {
 	console.log(randomNumberTwo)
 }
 
@@ -77,7 +77,7 @@ Si el número es par, imprimir en consola ‘El número es par’. De lo contrar
 */
 
 let randomNumberThree = 444
-if (randomNumberThree%2 == 0) {
+if (randomNumberThree%2 === 0) {
 	console.log("El numero es par")
 }else{
 	console.log("El numero es impar")
@@ -99,7 +99,7 @@ Crea un bloque de codigo que tome de referencia una variable string cuyo valor s
 */
 
 let randomLetter = 'F'
-if (randomLetter == 'A' || randomLetter == 'E' || randomLetter == 'I' || randomLetter == 'O' || randomLetter == 'U') {
+if (randomLetter === 'A' || randomLetter === 'E' || randomLetter === 'I' || randomLetter === 'O' || randomLetter === 'U') {
 	console.log("La letra es una vocal")
 }else{
 	console.log("La letra es una consonante")
@@ -110,7 +110,7 @@ Crea un bloque de código que tome de referencia un nombre. Si el nombre ingresa
 */
 
 let randomName = 'Pepe'
-if (randomName == 'Pedro') {
+if (randomName === 'Pedro') {
 	console.log("Hola Pedro, como estás?")
 }else{
 	console.log("Hola! Como te llamas?")
@@ -162,19 +162,19 @@ Por ejemplo: 1 = ‘lunes’.
 */
 
 let numberBetweenOneAndSeven = 4
-if (numberBetweenOneAndSeven == 1) {
+if (numberBetweenOneAndSeven === 1) {
 	console.log("El dia es Lunes")
-}else if (numberBetweenOneAndSeven == 2){
+}else if (numberBetweenOneAndSeven === 2){
 	console.log("El dia es Martes")
-}else if (numberBetweenOneAndSeven == 3){
+}else if (numberBetweenOneAndSeven === 3){
 	console.log("El dia es Miercoles")
-}else if (numberBetweenOneAndSeven == 4){
+}else if (numberBetweenOneAndSeven === 4){
 	console.log("El dia es Jueves")
-}else if (numberBetweenOneAndSeven == 5){
+}else if (numberBetweenOneAndSeven === 5){
 	console.log("El dia es Viernes")
-}else if (numberBetweenOneAndSeven == 6){
+}else if (numberBetweenOneAndSeven === 6){
 	console.log("El dia es Sabado")
-}else if (numberBetweenOneAndSeven == 7){
+}else if (numberBetweenOneAndSeven === 7){
 	console.log("El dia es Domingo")
 }else{
 	console.log("El numero no corresponde a ningun dia de la semana")
@@ -185,9 +185,11 @@ Crea un bloque de código que reciba un número e imprima en pantalla si es divi
 */
 
 let randomNumerEight = 44444444
-if (randomNumerEight%2 == 0) {
+if (randomNumerEight%2 === 0 && randomNumerEight%3 === 0) {
+	console.log("El numero es divisible por 2 y por 3")
+}else if (randomNumerEight%2 === 0) {
 	console.log("El numero es divisible por 2")
-}else if (randomNumerEight%3 == 0){
+}else if (randomNumerEight%3 === 0){
 	console.log("El numero es divisible por 3")
 }else{
 	console.log("El numero no es divisible ni por 2 ni por 3")
@@ -198,29 +200,29 @@ Crea un bloque de código que tome de referencia un número del 1 al 12 y devuel
 */
 
 let numberBetweenOneAndTwelve = 10
-if (numberBetweenOneAndTwelve == 1) {
+if (numberBetweenOneAndTwelve === 1) {
 	console.log("El mes es Enero")
-}else if (numberBetweenOneAndTwelve == 2){
+}else if (numberBetweenOneAndTwelve === 2){
 	console.log("El mes es Febrero")
-}else if (numberBetweenOneAndTwelve == 3){
+}else if (numberBetweenOneAndTwelve === 3){
 	console.log("El mes es Marzo")
-}else if (numberBetweenOneAndTwelve == 4){
+}else if (numberBetweenOneAndTwelve === 4){
 	console.log("El mes es Abril")
-}else if (numberBetweenOneAndTwelve == 5){
+}else if (numberBetweenOneAndTwelve === 5){
 	console.log("El mes es Mayo")
-}else if (numberBetweenOneAndTwelve == 6){
+}else if (numberBetweenOneAndTwelve === 6){
 	console.log("El mes es Junio")
-}else if (numberBetweenOneAndTwelve == 7){
+}else if (numberBetweenOneAndTwelve === 7){
 	console.log("El mes es Julio")
-}else if (numberBetweenOneAndTwelve == 8){
+}else if (numberBetweenOneAndTwelve === 8){
 	console.log("El mes es Agosto")
-}else if (numberBetweenOneAndTwelve == 9){
+}else if (numberBetweenOneAndTwelve === 9){
 	console.log("El mes es Septiembre")
-}else if (numberBetweenOneAndTwelve == 10){
+}else if (numberBetweenOneAndTwelve === 10){
 	console.log("El mes es Octubre")
-}else if (numberBetweenOneAndTwelve == 11){
+}else if (numberBetweenOneAndTwelve === 11){
 	console.log("El mes es Noviembre")
-}else if (numberBetweenOneAndTwelve == 12){
+}else if (numberBetweenOneAndTwelve === 12){
 	console.log("El mes es Diciembre")
 }else{
 	console.log("El numero no corresponde a ningun mes")
@@ -353,7 +355,7 @@ switch (randomLetter2){
 Crea un bloque de código que tome de referencia un número del 1 al 4. Utiliza switch para imprimir en consola la estación del año correspondiente.
 */
 
-let numberBetweenOneAndFour = 1
+let numberBetweenOneAndFour = 3
 switch (numberBetweenOneAndFour){
 	case 1:
 		console.log("La estacion del año es Verano")
@@ -378,7 +380,6 @@ EJERCICIOS TERNARIOS
 Crea un bloque de código que tome de referencia una variable ‘edad’. Utiliza el operador ternario para imprimir en consola si es o no mayor de edad.
 */
 
-//age fue declarada en el ejercicio 2 creo
 let oldEnough = (age >= 18) ? "Es mayor de edad" : "Es menor de edad";
 console.log(oldEnough)
 
@@ -386,18 +387,56 @@ console.log(oldEnough)
 Crea un bloque de código que tome de referencia un número. Utiliza el operador ternario para determinar si es par o impar y muestra el resultado en consola.
 */
 
+let evenOrOdd = (randomNumberTwo%2 === 0) ? "El numero es par" : "El numero es impar";
+console.log(evenOrOdd)
 
+/*
+Crea un bloque de código que tome de referencia dos números y utilice el operador ternario para determinar cual de los dos es el mayor. Luego imprime en consola el resultado.
+*/
 
+let whatNumberIsGreater = (randomNumberFive > randomNumberSeven) ? "El quinto numero random es mayor al septimo" : "El septimo numero random es mayor al quinto"
+console.log(whatNumberIsGreater)
 
+/*
+Crea un bloque de código que tome de referencia un número del 1 al 7 y utilice el operador ternario para imprimir en consola el día de la semana correspondiente.
+*/
 
+let whatDayItIs = (numberBetweenOneAndSeven === 1) ? "El dia es Lunes" :
+                (numberBetweenOneAndSeven === 2) ? "El dia es Martes" :
+                (numberBetweenOneAndSeven === 3) ? "El dia es Miércoles" :
+                (numberBetweenOneAndSeven === 4) ? "El dia es Jueves" :
+                (numberBetweenOneAndSeven === 5) ? "El dia es Viernes" :
+                (numberBetweenOneAndSeven === 6) ? "El dia es Sabado" :
+                (numberBetweenOneAndSeven === 7) ? "El dia es Domingo" :
+                "Número inválido";
 
+console.log(whatDayItIs);
 
+/*
+Crea un bloque de código que tome de referencia un número. Utiliza el operador ternario para determinar si es positivo, negativo o cero e imprime el resultado en consola.
+*/
 
+let whatIsTheNumber = (randomNumerEight > 0) ? "El numero es positivo" :
+               		(randomNumerEight < 0) ? "El numero es negativo" :
+               		(randomNumerEight === 0) ? "El numero es cero" :
+                	"Número inválido";
 
+console.log(whatIsTheNumber)   
 
+/*
+Crea un bloque de código que tome de referencia un número del 1 al 100 y utilice el operador ternario para determinar si es múltiplo de 3 y 5 para imprimir el resultado en consola.
+*/
 
+let numberBetweenOneAndOneHundred = 75
+let isMultipleOfThreeAndFive = (numberBetweenOneAndOneHundred%3 === 0 && numberBetweenOneAndOneHundred%5 === 0) ? "El numero es multiplo de 3 y 5" :
+	"El numero no es multiplo de 3 y 5"
+console.log(isMultipleOfThreeAndFive)
 
+/*
+EJERCICIOS PRACTICAS
 
+Crea un bloque de código que tome de referencia un número del 1 al 100 y, utilizando el tipo de condicional que prefieras, imprimir si es múltiplo de 2, 3 o 5 incluyendo las diferentes combinaciones posibles.
+*/
 
 
 
