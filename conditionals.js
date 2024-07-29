@@ -439,9 +439,42 @@ Crea un bloque de código que tome de referencia un número del 1 al 100 y, util
 */
 
 
+let exercise1 = 'El numero es '
 
+if (numberBetweenOneAndOneHundred%2 === 0) {
+	exercise1 += 'multiplo de 2 '
+} 
+if (numberBetweenOneAndOneHundred%3 === 0) {
+	exercise1 += 'multiplo de 3 '
+} 
+if (numberBetweenOneAndOneHundred%5 === 0) {
+	exercise1 += 'multiplo de 5 '
+} 
+console.log(exercise1)
 
+/*
+Crea un bloque de código que reciba un numero del 1 al 1000. Utiliza el tipo de condicional que prefieras para imprimir en consola si el numero es par o impar, si es divisible por 2, por 3 o por 5, y si es mayor o menor a 50.
+*/
 
+let exercise2 = 'El numero es '
+let numberBetweenOneAndOneThousand = 683
+
+if (numberBetweenOneAndOneThousand%2 === 0) {
+	exercise2 += 'es par es multiplo de 2 '
+}else{
+	exercise2 += 'es impar '
+}
+if (numberBetweenOneAndOneThousand%3 === 0) {
+	exercise2 += 'es multiplo de 3 '
+}
+if (numberBetweenOneAndOneThousand%5 === 0) {
+	exercise2 += 'es multiplo de 5 '
+}
+if (numberBetweenOneAndOneThousand > 50) {
+	exercise2 += 'es mayor a 50 '
+}else if (numberBetweenOneAndOneThousand < 50) {
+	exercise2 += 'es menor a 50 '
+}
 
 
 
