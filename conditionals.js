@@ -382,7 +382,9 @@ Crea un bloque de código que tome de referencia una variable ‘edad’. Utiliz
 let oldEnough = (age >= 18) ? "Es mayor de edad" : "Es menor de edad";
 console.log(oldEnough)
 
-
+/*
+Crea un bloque de código que tome de referencia un número. Utiliza el operador ternario para determinar si es par o impar y muestra el resultado en consola.
+*/
 
 
 
