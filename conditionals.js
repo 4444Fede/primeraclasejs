@@ -475,24 +475,3 @@ if (numberBetweenOneAndOneThousand > 50) {
 }else if (numberBetweenOneAndOneThousand < 50) {
 	exercise2 += 'es menor a 50 '
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
