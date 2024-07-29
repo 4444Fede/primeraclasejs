@@ -450,6 +450,9 @@ if (numberBetweenOneAndOneHundred%3 === 0) {
 if (numberBetweenOneAndOneHundred%5 === 0) {
 	exercise1 += 'multiplo de 5 '
 } 
+if (exercise1 === 'El numero es ') {
+	exercise1 = 'El numero no es divisible por ninguno'
+}
 console.log(exercise1)
 
 /*
@@ -475,3 +478,7 @@ if (numberBetweenOneAndOneThousand > 50) {
 }else if (numberBetweenOneAndOneThousand < 50) {
 	exercise2 += 'es menor a 50 '
 }
+if (exercise2 === 'El numero es ') {
+	exercise2 = 'El numero no cumple con ninguna de las condiciones'
+}
+console.log(exercise2)
