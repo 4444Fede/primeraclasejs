@@ -17,7 +17,7 @@ Crea un bloque de código que tome la edad de un usuario y la compare con un nú
 let age = 15
 let alcoholismAge = 18
 if (age < alcoholismAge) {
-	console.log("Todavia no puedes tomar alcohol")
+	console.log("Todavia no podes tomar alcohol")
 }
 
 /*
