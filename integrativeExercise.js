@@ -16,7 +16,7 @@ function seniorDiscount(age, totalAmount){
 	if (age >= 60) {
 		return totalAmountWithDiscount = totalAmount * 0.9
 	}else{
-		return 0
+		return totalAmount
 	}
 }
 
@@ -42,7 +42,7 @@ function coverCharge(amount){
 }
 
 function orderSummary(quantity, totalAmount, totalWithDiscount, taxes, finalAmount){
-	if (totalWithDiscount > 0) {
+	if (totalWithDiscount != totalAmount) {
 		summary = `Pedido: ${quantity} productos \nPrecio: ${totalAmount} \nPrecio con descuento: ${totalWithDiscount} \nImpuestos: ${taxes} \nPrecio final: ${finalAmount}`
 	}else{
 		summary = `Pedido: ${quantity} productos \nPrecio: ${totalAmount} \nImpuestos: ${taxes} \nPrecio final: ${finalAmount}`
@@ -58,21 +58,11 @@ function manageOrder(completeName, age, quantity, paymentMethod){
 	let totalWithDiscount = seniorDiscount(age, totalAmount)
 	selectPaymentMethod(paymentMethod)
 	if (paymentMethod === 'Efectivo') {
-		if (totalWithDiscount > 0) {
-			totalWithDiscount = paymentMethodDiscount(totalWithDiscount)
-		}else{
-			totalWithDiscount = paymentMethodDiscount(totalAmount)
-		}
+		totalWithDiscount = paymentMethodDiscount(totalWithDiscount)
 	}
 	showOrderTime()
-	let finalAmount = 0
-	if (totalWithDiscount > 0){
-		let taxes = coverCharge(totalWithDiscount)
-		finalAmount = totalWithDiscount + taxes
-	}else{
-		let taxes = coverCharge(totalAmount)
-		finalAmount = totalAmount + taxes
-	}
+	let taxes = coverCharge(totalWithDiscount)
+	let finalAmount = totalWithDiscount + taxes
 	orderSummary(quantity, totalAmount, totalWithDiscount, taxes, finalAmount)
 }
-manageOrder('Agustin Pijurria', 91, 40, 'Efectivo')
+manageOrder('Agustin Pijurria', 17, 40, 'Efectivo')
