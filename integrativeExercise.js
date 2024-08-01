@@ -35,7 +35,7 @@ function askPaymentMethod(){
 }
 
 function askQuantity(){
-	let quantity = window.prompt("Ingrese la cantidad deseada")
+	let quantity = window.prompt("Ingrese la unidades deseadas")
 	while (isNaN(quantity) || quantity < 0) {
 		quantity = window.prompt("Por favor ingrese una cantidad valida")
 	}
@@ -126,8 +126,8 @@ function manageOrder(){
 	let completeName = `${name} ${surname}`
 	let age = askAge()
 	let paymentMethod = askPaymentMethod()
-	let quantity = askQuantity()
 	let unitPrice = askProduct()
+	let quantity = askQuantity()
 
 	helloCustomer(completeName)
 	isClientOldEnough(age)
