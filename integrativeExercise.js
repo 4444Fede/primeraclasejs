@@ -3,7 +3,7 @@ function askName(){
 	while (!isNaN(name) || name.length < 0 || name.length > 30) {
 		name = window.prompt("Por favor ingrese un nombre valido")
 	}
-	console.log(`Nombre ingresado: ${name}`)
+	console.log(`Nombre ingresado: ${name.trim()}`)
 	return name.trim()
 }
 
@@ -12,7 +12,7 @@ function askSurname(){
 	while (!isNaN(surname) || surname.length < 0 || surname.length > 30) {
 		surname = window.prompt("Por favor ingrese un apellido valido")
 	}
-	console.log(`Apellido ingresado: ${surname}`)
+	console.log(`Apellido ingresado: ${surname.trim()}`)
 	return surname.trim()
 }
 
@@ -21,16 +21,16 @@ function askAge(){
 	while (age === null || isNaN(age) || age <= 0 || age > 115) {
 		age = window.prompt("Por favor ingrese una edad valida")
 	}
-	console.log(`Edad ingresada: ${age}`)
+	console.log(`Edad ingresada: ${age.trim()}`)
 	return age
 }
 
 function askPaymentMethod(){
 	let paymentMethod = window.prompt('Ingrese el metodo de pago')
-	while(paymentMethod.toLowerCase() !== 'efectivo' && paymentMethod.toLowerCase() !== 'credito' && paymentMethod.toLowerCase() !== 'debito'){
+	while(paymentMethod.toLowerCase().trim() !== 'efectivo' && paymentMethod.toLowerCase().trim() !== 'credito' && paymentMethod.toLowerCase().trim() !== 'debito'){
 		paymentMethod = window.prompt('Ingrese un metodo de pago valido por favor (Efectivo, credito, debito')
 	}
-	console.log(`Metodo de pago seleccionado: ${paymentMethod}`)
+	console.log(`Metodo de pago seleccionado: ${paymentMethod.trim()}`)
 	return paymentMethod
 }
 
@@ -39,17 +39,17 @@ function askQuantity(){
 	while (isNaN(quantity) || quantity < 0) {
 		quantity = window.prompt("Por favor ingrese una cantidad valida")
 	}
-	console.log(`Cantidad seleccionada: ${quantity}`)
+	console.log(`Cantidad seleccionada: ${quantity.trim()}`)
 	return quantity
 }
 
 function askProduct(){
 	let product = window.prompt(`Ingrese el producto deseado, puede consultar la lista de productos a continuacion: \n-Manzana \n-Banana \n-Naranja \n-Durazno \n-Frutilla \n-Kiwi`)
-	while (product.toLowerCase() !== 'manzana' && product.toLowerCase() !== 'banana' && product.toLowerCase() !== 'naranja' && product.toLowerCase() !== 'durazno' && product.toLowerCase() !== 'frutilla' && product.toLowerCase() !== 'kiwi'){
+	while (product.toLowerCase().trim() !== 'manzana' && product.toLowerCase().trim() !== 'banana' && product.toLowerCase().trim() !== 'naranja' && product.toLowerCase().trim() !== 'durazno' && product.toLowerCase().trim() !== 'frutilla' && product.toLowerCase().trim() !== 'kiwi'){
 		product = window.prompt(`Producto invalido, consulte la lista de productos disponibles a continuacion: \n-Manzana \n-Banana \n-Naranja \n-Durazno \n-Frutilla \n-Kiwi`)
 	}
-	console.log(`Producto seleccionado: ${product}`)
-	switch (product.toLowerCase()) {
+	console.log(`Producto seleccionado: ${product.trim()}`)
+	switch (product.toLowerCase().trim()) {
     case 'manzana':
         unitPrice = 10
         break;
@@ -133,7 +133,7 @@ function manageOrder(){
 	isClientOldEnough(age)
 	let totalAmount = calculateTotalAmount(quantity, unitPrice)
 	let totalWithDiscount = seniorDiscount(age, totalAmount)
-	if (paymentMethod.toLowerCase() === 'efectivo') {
+	if (paymentMethod.toLowerCase().trim() === 'efectivo') {
 		totalWithDiscount = paymentMethodDiscount(totalWithDiscount)
 	}
 	showOrderTime()
