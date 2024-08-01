@@ -1,19 +1,19 @@
 function askName(){
-	let name = window.prompt("Ingrese su nombre")
+	let name = window.prompt("Ingrese su nombre").toLowerCase().trim()
 	while (!isNaN(name) || name.length < 0 || name.length > 30) {
-		name = window.prompt("Por favor ingrese un nombre valido")
+		name = window.prompt("Por favor ingrese un nombre valido").toLowerCase().trim()
 	}
-	console.log(`Nombre ingresado: ${name.trim()}`)
-	return name.trim()
+	console.log(`Nombre ingresado: ${name}`)
+	return name
 }
 
 function askSurname(){
-	let surname = window.prompt("Ingrese su apellido")
+	let surname = window.prompt("Ingrese su apellido").toLowerCase().trim()
 	while (!isNaN(surname) || surname.length < 0 || surname.length > 30) {
-		surname = window.prompt("Por favor ingrese un apellido valido")
+		surname = window.prompt("Por favor ingrese un apellido valido").toLowerCase().trim()
 	}
-	console.log(`Apellido ingresado: ${surname.trim()}`)
-	return surname.trim()
+	console.log(`Apellido ingresado: ${surname}`)
+	return surname
 }
 
 function askAge(){
@@ -26,11 +26,11 @@ function askAge(){
 }
 
 function askPaymentMethod(){
-	let paymentMethod = window.prompt('Ingrese el metodo de pago')
-	while(paymentMethod.toLowerCase().trim() !== 'efectivo' && paymentMethod.toLowerCase().trim() !== 'credito' && paymentMethod.toLowerCase().trim() !== 'debito'){
-		paymentMethod = window.prompt('Ingrese un metodo de pago valido por favor (Efectivo, credito, debito')
+	let paymentMethod = window.prompt('Ingrese el metodo de pago').toLowerCase().trim()
+	while(paymentMethod !== 'efectivo' && paymentMethod !== 'credito' && paymentMethod !== 'debito'){
+		paymentMethod = window.prompt('Ingrese un metodo de pago valido por favor (Efectivo, credito, debito').toLowerCase().trim()
 	}
-	console.log(`Metodo de pago seleccionado: ${paymentMethod.trim()}`)
+	console.log(`Metodo de pago seleccionado: ${paymentMethod}`)
 	return paymentMethod
 }
 
@@ -44,12 +44,12 @@ function askQuantity(){
 }
 
 function askProduct(){
-	let product = window.prompt(`Ingrese el producto deseado, puede consultar la lista de productos a continuacion: \n-Manzana \n-Banana \n-Naranja \n-Durazno \n-Frutilla \n-Kiwi`)
-	while (product.toLowerCase().trim() !== 'manzana' && product.toLowerCase().trim() !== 'banana' && product.toLowerCase().trim() !== 'naranja' && product.toLowerCase().trim() !== 'durazno' && product.toLowerCase().trim() !== 'frutilla' && product.toLowerCase().trim() !== 'kiwi'){
-		product = window.prompt(`Producto invalido, consulte la lista de productos disponibles a continuacion: \n-Manzana \n-Banana \n-Naranja \n-Durazno \n-Frutilla \n-Kiwi`)
+	let product = window.prompt(`Ingrese el producto deseado, puede consultar la lista de productos a continuacion: \n-Manzana \n-Banana \n-Naranja \n-Durazno \n-Frutilla \n-Kiwi`).toLowerCase().trim()
+	while (product.toLowerCase() !== 'manzana' && product !== 'banana' && product !== 'naranja' && product !== 'durazno' && product !== 'frutilla' && product !== 'kiwi'){
+		product = window.prompt(`Producto invalido, consulte la lista de productos disponibles a continuacion: \n-Manzana \n-Banana \n-Naranja \n-Durazno \n-Frutilla \n-Kiwi`).toLowerCase().trim()
 	}
-	console.log(`Producto seleccionado: ${product.trim()}`)
-	switch (product.toLowerCase().trim()) {
+	console.log(`Producto seleccionado: ${product}`)
+	switch (product){
     case 'manzana':
         unitPrice = 10
         break;
@@ -133,7 +133,7 @@ function manageOrder(){
 	isClientOldEnough(age)
 	let totalAmount = calculateTotalAmount(quantity, unitPrice)
 	let totalWithDiscount = seniorDiscount(age, totalAmount)
-	if (paymentMethod.toLowerCase().trim() === 'efectivo') {
+	if (paymentMethod === 'efectivo') {
 		totalWithDiscount = paymentMethodDiscount(totalWithDiscount)
 	}
 	showOrderTime()
