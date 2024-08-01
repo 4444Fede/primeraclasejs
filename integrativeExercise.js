@@ -1,3 +1,77 @@
+function askName(){
+	let name = window.prompt("Ingrese su nombre")
+	while (!isNaN(name) || name.length < 0 || name.length > 30) {
+		name = window.prompt("Por favor ingrese un nombre valido")
+	}
+	console.log(`Nombre ingresado: ${name}`)
+	return name.trim()
+}
+
+function askSurname(){
+	let surname = window.prompt("Ingrese su apellido")
+	while (!isNaN(surname) || surname.length < 0 || surname.length > 30) {
+		surname = window.prompt("Por favor ingrese un apellido valido")
+	}
+	console.log(`Apellido ingresado: ${surname}`)
+	return surname.trim()
+}
+
+function askAge(){
+	let age = window.prompt("Ingrese su edad")
+	while (age === null || isNaN(age) || age <= 0 || age > 115) {
+		age = window.prompt("Por favor ingrese una edad valida")
+	}
+	console.log(`Edad ingresada: ${age}`)
+	return age
+}
+
+function askPaymentMethod(){
+	let paymentMethod = window.prompt('Ingrese el metodo de pago')
+	while(paymentMethod.toLowerCase() !== 'efectivo' && paymentMethod.toLowerCase() !== 'credito' && paymentMethod.toLowerCase() !== 'debito'){
+		paymentMethod = window.prompt('Ingrese un metodo de pago valido por favor (Efectivo, credito, debito')
+	}
+	console.log(`Metodo de pago seleccionado: ${paymentMethod}`)
+	return paymentMethod
+}
+
+function askQuantity(){
+	let quantity = window.prompt("Ingrese la cantidad deseada")
+	while (isNaN(quantity) || quantity < 0) {
+		quantity = window.prompt("Por favor ingrese una cantidad valida")
+	}
+	console.log(`Cantidad seleccionada: ${quantity}`)
+	return quantity
+}
+
+function askProduct(){
+	let product = window.prompt(`Ingrese el producto deseado, puede consultar la lista de productos a continuacion: \n-Manzana \n-Banana \n-Naranja \n-Durazno \n-Frutilla \n-Kiwi`)
+	while (product.toLowerCase() !== 'manzana' && product.toLowerCase() !== 'banana' && product.toLowerCase() !== 'naranja' && product.toLowerCase() !== 'durazno' && product.toLowerCase() !== 'frutilla' && product.toLowerCase() !== 'kiwi'){
+		product = window.prompt(`Producto invalido, consulte la lista de productos disponibles a continuacion: \n-Manzana \n-Banana \n-Naranja \n-Durazno \n-Frutilla \n-Kiwi`)
+	}
+	console.log(`Producto seleccionado: ${product}`)
+	switch (product.toLowerCase()) {
+    case 'manzana':
+        unitPrice = 10
+        break;
+    case 'banana':
+        unitPrice = 20
+        break;
+    case 'naranja':
+        unitPrice = 15
+        break;
+    case 'durazno':
+        unitPrice = 25
+        break;
+    case 'frutilla':
+        unitPrice = 13
+        break;
+    case 'kiwi':
+        unitPrice = 44
+        break;
+	}
+	return unitPrice
+}
+
 function helloCustomer(completeName){
 	console.log(`Hola, ${completeName}, esperemos disfrutes del servicio!!`)
 }
@@ -18,10 +92,6 @@ function seniorDiscount(age, totalAmount){
 	}else{
 		return totalAmount
 	}
-}
-
-function selectPaymentMethod(paymentMethod, amount){
-	console.log(`Metodo de pago: ${paymentMethod}`)
 }
 
 function paymentMethodDiscount(amount){
@@ -50,14 +120,20 @@ function orderSummary(quantity, totalAmount, totalWithDiscount, taxes, finalAmou
 	console.log(summary)
 }
 
-function manageOrder(completeName, age, quantity, paymentMethod){
-	let unitPrice = 25
+function manageOrder(){
+	let name = askName()
+	let surname = askSurname()
+	let completeName = `${name} ${surname}`
+	let age = askAge()
+	let paymentMethod = askPaymentMethod()
+	let quantity = askQuantity()
+	let unitPrice = askProduct()
+
 	helloCustomer(completeName)
 	isClientOldEnough(age)
 	let totalAmount = calculateTotalAmount(quantity, unitPrice)
 	let totalWithDiscount = seniorDiscount(age, totalAmount)
-	selectPaymentMethod(paymentMethod)
-	if (paymentMethod === 'Efectivo') {
+	if (paymentMethod.toLowerCase() === 'efectivo') {
 		totalWithDiscount = paymentMethodDiscount(totalWithDiscount)
 	}
 	showOrderTime()
@@ -65,4 +141,5 @@ function manageOrder(completeName, age, quantity, paymentMethod){
 	let finalAmount = totalWithDiscount + taxes
 	orderSummary(quantity, totalAmount, totalWithDiscount, taxes, finalAmount)
 }
-manageOrder('Agustin Pijurria', 17, 40, 'Efectivo')
+
+manageOrder()
